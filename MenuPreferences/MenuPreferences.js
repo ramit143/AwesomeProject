@@ -57,7 +57,7 @@ export const MenuPreferenceComponent = () => {
       );
     });
 
-    // HHHHHHHHH?
+    
 // -------------------------------------------Checking----------------------//
     return (
       <View style={styles.row}>{rowItems}</View>
