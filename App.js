@@ -1,31 +1,22 @@
-import { useState,useEffect } from "react";
+import { View, Text } from 'react-native'
 import React from 'react'
-import {View} from 'react-native'
-import { Text } from "react-native-svg";
+import { useEffect } from 'react'
+import SplashScreen from 'react-native-splash-screen';
+import AppNavigator from './ComponentForPractice/Src/AppNavigator';
+import MainScreen from './ComponentForPractice/Src/screens/MainScreen';
 
-
-
-const App = () => {
-  const [data, setData] = useState([]);
+const App = ({ }) => {
 
   useEffect(() => {
-    fetch('https://api.eenadu.net/newmobileapis/hometabs.php/?stateid=99')
-      .then((response) => response.json())
-      .then((json) => setData(response))
-      .catch((error) => {
-        console.error(error);
-      });
+    // Hide the splash screen after a specific duration (e.g., 2000 milliseconds = 2 seconds)
+    setTimeout(() => {
+      SplashScreen.hide();
+    }, 2000);
   }, []);
 
   return (
-    <View>
-      {data.map((item) => (
-        item.subresponse.map((subItem) => (
-          <option key={subItem.id} value={subItem.teltitle}>{subItem.teltitle}</option>
-        ))
-      ))}
-    </View>
-  );
-};
+    <AppNavigator />
+  )
+}
 
 export default App;

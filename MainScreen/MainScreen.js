@@ -40,8 +40,8 @@
 // export default MainScreen;
 
 
-// // <Stack.Screen name="Home" component={ListOfData} options={{ headerShown: false }} />
-// // <Stack.Screen name="NewsDetails" component={NewsDetailsScreen} options={{ headerShown: false }} />
+// <Stack.Screen name="Home" component={ListOfData} options={{ headerShown: false }} />
+// <Stack.Screen name="NewsDetails" component={NewsDetailsScreen} options={{ headerShown: false }} />
 
 
 
@@ -57,7 +57,8 @@ import { Notifications } from "../Notifications/Notifications";
 import { NewsDetailsOfNotification } from "../NewsDetailsOfNotification/NewsDetailsOfNotification";
 import { OpenChromePopupButton } from "../OpenBrowserPopUp/OpenBrowserPopUp";
 import { PreferencesComponent } from "../Preferences/Preferences";
-import {MenuPreferenceComponent } from "../MenuPreferences/MenuPreferences";
+import { MenuPreferenceComponent } from "../MenuPreferences/MenuPreferences";
+import { MenuOfHeader } from "../MenuOfHeader/MenuOfHeader";
 // import { Bookmarks } from "../Bookmarks/Bookmarks";
 
 
@@ -87,9 +88,10 @@ const MainScreen = () => {
         <Stack.Screen name="Notifications" component={Notifications} options={{ headerShown: false }} />
         <Stack.Screen name="NewsDetailsOfNotification" component={NewsDetailsOfNotification} options={{ headerShown: false }} />
         {/* <Stack.Screen name="Bookmarks" component={ Bookmarks} options={{ headerShown: false }}  bookmarks={bookmarks} addBookmark={addBookmark} /> */}
-        <Stack.Screen name="OpenWithChrome" component={OpenChromePopupButton}  />
-        <Stack.Screen name="Preference" component={PreferencesComponent}  options={{ headerShown: false }} />
+        <Stack.Screen name="OpenWithChrome" component={OpenChromePopupButton} />
+        {/* <Stack.Screen name="Preference" component={PreferencesComponent} options={{ headerShown: false }} /> */}
         <Stack.Screen name="MenuPreferenceComponent" component={MenuPreferenceComponent} options={{ headerShown: false }} />
+        {/* <Stack.Screen name="MenuOfHeader" component={MenuOfHeader} options={{ headerShown: false }} /> */}
 
 
 

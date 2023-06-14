@@ -34,7 +34,7 @@ export const MenuPreferenceComponent = () => {
   const renderRow = ({ item }) => {
     const rowItems = item.map((dropdownItem) => {
       const imageUrl = dropdownItem.icon;
-      console.log("response data === :", { item })
+      // console.log("response data === :", { item })
       return (
         <TouchableOpacity
           key={dropdownItem.tabid}
@@ -150,7 +150,5 @@ const styles = StyleSheet.create({
     color: 'black',
   },
 });
-
-
 
 
